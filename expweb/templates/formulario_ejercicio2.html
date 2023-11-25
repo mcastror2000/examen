@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inicio de Sesión</h1>
+        <form id="formularioInicioSesion">
+            <div class="input-group">
+                <label for="usuario">Ingresa tu nombre:</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Nombre de usuario">
+            </div>
+            <div class="input-group">
+                <label for="contrasena">Ingresa tu contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required placeholder="Contraseña">
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        document.getElementById('formularioInicioSesion').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var usuario = document.getElementById('usuario').value;
+            var contrasena = document.getElementById('contrasena').value;
+
+            if (usuario === 'juan' && contrasena === 'admin') {
+                document.getElementById('resultado').textContent = 'Bienvenido administrador juan';
+            } else if (usuario === 'pepe' && contrasena === 'user') {
+                document.getElementById('resultado').textContent = 'Bienvenido usuario pepe';
+            } else {
+                document.getElementById('resultado').textContent = 'Usuario o contraseña incorrectos';
+            }
+        });
+    </script>
+</body>
+</html>

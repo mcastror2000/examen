@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2; /* Fondo claro para la página */
+        }
+        .container {
+            text-align: center;
+            display: flex; /* Añadido para alinear los botones horizontalmente */
+            justify-content: center;
+        }
+        button {
+            width: 100px; /* Ancho fijo para forma cuadrada */
+            height: 100px; /* Altura fija para forma cuadrada */
+            margin: 10px; /* Espacio entre botones */
+            padding: 0; /* Sin padding adicional */
+            font-size: 16px; /* Ajustar tamaño del texto si es necesario */
+            background-color: #007bff; /* Fondo azul */
+            color: white; /* Texto blanco */
+            border: none; /* Eliminar borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+            transition: background-color 0.3s; /* Efecto suave al cambiar de color */
+        }
+        button:hover {
+            background-color: #0056b3; /* Cambiar color al pasar el mouse */
+        }
+        button[name="ejercicio1"] {
+            background-color: purple; /* Color morado para el botón Ejercicio 1 */
+        }
+        button[name="ejercicio2"] {
+            background-color: green; /* Color verde para el botón Ejercicio 2 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <button type="submit" name="ejercicio1">Ejercicio 1</button>
+            <button type="submit" name="ejercicio2">Ejercicio 2</button>
+        </form>
+    </div>
+</body>
+</html>
